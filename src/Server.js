@@ -1,25 +1,5 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-
-// settings
-app.set('port', 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs');
-
-// middlewares
-
-// routes
-app.use(require('./routes/index'));
-
-// static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-// listening the server
-app.listen(app.get('port'), () => {
-    console.log('Servidor en el puerto', app.get('port'));
-});
+var express = require('express');
+var app = express();
 
 app.get('/', function (req, res) {
 
@@ -57,4 +37,8 @@ app.get('/', function (req, res) {
 
         });
     });
+});
+
+var server = app.listen(5000, function () {
+    console.log('Server is running..');
 });

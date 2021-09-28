@@ -11,14 +11,14 @@
   "keywords": [
     "express",
     "nodejs"
-    
   ],
   "author": "Ivan Garcia de Gabriel",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.0.2",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "mssql": "^7.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
